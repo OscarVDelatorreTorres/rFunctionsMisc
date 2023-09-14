@@ -1,6 +1,7 @@
 # Esta librería es para leer de repositorios de github privados como los míos:
 
-library(httr)
+if (!require(httr)) {install.packages('httr')
+  library(httr)} else {library(httr)} 
 
 privateGitHubRead=function(GitHubURL,github_email,github_personal_access_token){
 script <-
